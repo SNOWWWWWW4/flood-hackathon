@@ -4,5 +4,29 @@
 
 
 .mapHeight{
-  height: calc(100vh - 64px);
+  /* height: calc(100vh - 64px); */
+  height: 450px;
+  width: 650px;
+  border-radius: 10px;
+}
+
+.heroBG {
+  background-image: url(./assets/abraham-osorio-jb3HiaUlVKo-unsplash.jpg);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.missionBG {
+  height: 60vh;
+  background-color: transparent;
+  width:100%;
+}
+
+.missionImg {
+  z-index: 10;
+  
 }

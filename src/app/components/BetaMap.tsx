@@ -110,38 +110,6 @@ const BetaMap = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
     </Menu>
   );
 
@@ -261,51 +229,11 @@ const BetaMap = () => {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            PottyMap
+            FloodHero
           </Typography>
-          <Search ref={geocoderContainerRef}>
+          <Search >
           </Search>
 
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
@@ -315,10 +243,53 @@ const BetaMap = () => {
         {list}
       </Drawer>
 
-      
-      
-      <div ref={mapContainerRef} className='mapHeight'></div>
-      
+      <Box>
+        <section className="bg-sky-500 py-12 px-12">
+          <div className='heroBG py-4 px-4'>
+            <h1>Reponsiveness Matters</h1>
+            <h2>Every second counts</h2>
+          </div>
+        </section>
+
+        <section className='bg-white'>
+          <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-20'>Welcome to HeroFlood, your ultimate guide to understanding, preparing for, and responding to flooding incidents.</h1>
+          <h1 className='text-center text-slate-500 mt-4 text-2xl mx-40'> 
+             Our platform empowers individuals and communities with vital information, resources, and tools to mitigate the risks associated with flooding and ensure safety during emergencies.
+          </h1>
+
+          <div className='bg-sky-900 mx-40 rounded-md py-4 px-4 my-4 grid grid-cols-2 mt-20'>
+            <div className='py-4'>
+              <h1 className='text-white text-3xl font-bold px-8'>Our Mission</h1>
+              <p className='text-white  mx-8 mt-10'>
+              At HeroFlood, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
+              </p>
+            </div>
+
+            <div className='missionBG'></div>
+          </div>
+
+          
+        </section>
+
+        <section className='bg-sky-600 mt-20'>
+            <h1>our mission</h1>
+        </section>
+
+        <section className='bg-sky-700'>
+            <h1>hi</h1>
+        </section>
+
+        <section className='bg-sky-950 w-full grid grid-cols-2 p-4'>
+          <div className="justify-center">
+
+
+            <div ref={geocoderContainerRef}></div>
+          </div>
+
+          <div ref={mapContainerRef} className='mapHeight'></div>
+
+        </section>
+      </Box>
     </Box>
   )
 }
