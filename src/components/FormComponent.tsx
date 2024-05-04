@@ -29,7 +29,8 @@ export default function FormComponent() {
       
 
       <FormControl variant="standard">
-        
+      <InputLabel htmlFor="component-helper">Contact Information</InputLabel>
+
         <InputLabel htmlFor="component-helper" className="text-white">Contact Information</InputLabel>
         <TextField
           id="component-helper"
