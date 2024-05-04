@@ -33,8 +33,13 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { getMapDots } from '@/utils/DataServices';
+import { Button, Fab } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import Modal from './Modal';
 
 const BetaMap = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
   //Navbar Styling
   const Search = styled('div')(({ theme }) => ({
@@ -431,6 +436,8 @@ const BetaMap = () => {
         {list}
       </Drawer>
 
+      <Modal {...{ isModalOpen, setIsModalOpen }}/>
+
       <Box>
         <section className="bg-sky-500 py-12 px-12">
           <div className='heroBG py-4 px-4'>
@@ -438,6 +445,18 @@ const BetaMap = () => {
             <h2>Every second counts</h2>
           </div>
         </section>
+
+        <Button  variant="contained" color="primary" onClick={() => setIsModalOpen(true)}
+            size="large" aria-label="add"
+            style={{
+                position: 'fixed',
+                bottom: '25px',
+                right: '5px',
+                zIndex: 100,
+            }}
+        >
+            Report
+        </Button>
 
         <section className='bg-white'>
           <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-20'>Welcome to HeroFlood, your ultimate guide to understanding, preparing for, and responding to flooding incidents.</h1>
@@ -456,7 +475,6 @@ const BetaMap = () => {
             <div className='missionBG'></div>
           </div>
 
-          
         </section>
 
         <section className='bg-sky-600 mt-20'>
@@ -468,13 +486,12 @@ const BetaMap = () => {
         </section>
 
         <section className='bg-sky-950 w-full grid grid-cols-2 p-4'>
+
           <div className="justify-center">
-
-
             <div ref={geocoderContainerRef}></div>
           </div>
 
-          <div ref={mapContainerRef} className='mapHeight'></div>
+          <div ref={mapContainerRef} className='mapHeight mx-auto'></div>
 
         </section>
       </Box>
