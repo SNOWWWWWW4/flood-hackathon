@@ -446,8 +446,8 @@ const BetaMap = () => {
 
           <div className='bg-sky-900 mx-10 lg:mx-40 rounded-md py-4 px-4 my-4 grid lg:grid-cols-2 mt-20'>
             <div className='py-4'>
-              <h1 className='text-white text-3xl font-bold px-8'>Our Mission</h1>
-              <p className='text-white  mx-8 mt-10'>
+              <h1 className='text-white text-3xl font-bold px-4 lg:px-8'>Our Mission</h1>
+              <p className='text-white mx-4 lg:mx-8 mt-10'>
               At FloodHero, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
               </p>
             </div>
