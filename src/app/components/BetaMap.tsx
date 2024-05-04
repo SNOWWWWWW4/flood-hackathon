@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
+import delta from '../assets/delta.jpg'
+
 //Navbar
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -452,7 +454,9 @@ const BetaMap = () => {
               </p>
             </div>
 
-            <div className='missionBG'></div>
+            <div className='missionBG'>
+              <img src={delta.src} alt="delta" />
+            </div>
           </div>
 
           
