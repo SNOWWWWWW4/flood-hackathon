@@ -1,3 +1,4 @@
+import FormComponent from "@/components/Formcomponent";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
           hello
         </p>
         </div>
+        
     </main>
   );
 }

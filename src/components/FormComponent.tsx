@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import FilledInput from "@mui/material/FilledInput";
+
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -10,6 +10,7 @@ import Input from "@mui/material/Input";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 import OutlinedInput from "@mui/material/OutlinedInput";
+import { TextField } from "@mui/material";
 
 export default function FormComponent() {
   const [age, setAge] = React.useState("");
@@ -19,31 +20,22 @@ export default function FormComponent() {
   };
 
   return (
-    <div >
-    <Box
-      component="form"
-      sx={{
-        "& > :not(style)": { m: 1 },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-
+    <>
+      
       <FormControl variant="standard">
         <InputLabel htmlFor="component-simple">Name</InputLabel>
-        <Input id="component-simple" defaultValue="Composed TextField" />
+        <Input id="component-simple" />
       </FormControl>
 
       <FormControl variant="standard">
         <InputLabel htmlFor="component-helper">Contact Information</InputLabel>
-        <Input
+        <TextField
           id="component-helper"
-          defaultValue="Composed TextField"
+          label='Phone number'
           aria-describedby="component-helper-text"
+          helperText="phone"
         />
-        <FormHelperText id="component-helper-text">
-          Phone number and/or email address
-        </FormHelperText>
+        
       </FormControl>
 
       <FormControl variant="standard">
@@ -52,7 +44,7 @@ export default function FormComponent() {
         </InputLabel>
         <Input
           id="component-helper"
-          defaultValue="Composed TextField"
+         
           aria-describedby="component-helper-text"
         />
         <FormHelperText id="component-helper-text">
@@ -92,19 +84,20 @@ export default function FormComponent() {
 
       <FormControl  variant="standard">
         <InputLabel htmlFor="component-helper">Location</InputLabel>
-        <Input id="component-helper-text" defaultValue="Composed TextField" />
+        <Input id="component-helper-text" />
         <FormHelperText>address</FormHelperText>
       </FormControl>
       <FormControl variant="standard">
         <InputLabel htmlFor="component-error">Additional Notes</InputLabel>
         <Input
           id="component-error"
-          defaultValue="Composed TextField"
+         
           aria-describedby="component-error-text"
         />
         <FormHelperText id="component-error-text">additional information</FormHelperText>
       </FormControl>
-    </Box>
-    </div>
+    
+      </>
   );
 }
+
