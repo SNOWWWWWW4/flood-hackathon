@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mapbox/mapbox-gl-geocoder": "^5.0.2",
     "@mapbox/search-js-react": "^1.0.0-beta.20",
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
