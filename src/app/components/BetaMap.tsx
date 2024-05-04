@@ -238,7 +238,7 @@ const BetaMap = () => {
       });
       geocoderContainerRef.current.appendChild(geocoder.onAdd(map));
     }
-  }, [map, isOpen]);
+  }, [map, isOpen, isMobileMenuOpen, isMenuOpen]);
 
 
   return (
