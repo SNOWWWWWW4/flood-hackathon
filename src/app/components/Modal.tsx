@@ -1,5 +1,5 @@
 import { Close } from '@mui/icons-material';
-import { Alert, Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, IconButton, Step, StepButton, Stepper, Typography } from '@mui/material';
+import { Alert, Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, FormHelperText, IconButton, Input, InputLabel, MenuItem, Select, Step, StepButton, Stepper, Typography } from '@mui/material';
 import React, { useState } from 'react'
 import CheckIcon from '@mui/icons-material/Check'
 
@@ -135,29 +135,81 @@ const Modal = ({ isModalOpen, setIsModalOpen }: { isModalOpen: boolean, setIsMod
 
                         {activeStep === 0 &&
                             <Box className='grid grid-cols-2 gap-6 my-4'>
-                                <FormControl>
-                                    <label className="text-sm font-bold text-gray-700 mb-3">Address</label>
-                                    <input
-                                        className="w-full h-10 px-3 py-2 rounded mb-3 border-2"
-                                        placeholder="Start typing your address, e.g. 123 Main..."
-                                        autoComplete="address-line1"
-                                        id="mapbox-autofill"
-                                    />
-                                </FormControl>
-                                <FormControl>
-                                    <label className="text-sm font-bold text-gray-700 mb-3">City</label>
-                                    <input className="w-full h-10 px-3 py-2 rounded mb-3 border-2" placeholder="City" autoComplete="address-level2" />
-                                </FormControl>
+                                <FormControl variant="standard">
+        <InputLabel htmlFor="component-simple">Name</InputLabel>
+        <Input id="component-simple" defaultValue="Composed TextField" />
+      </FormControl>
 
-                                <FormControl>
-                                    <label className="text-sm font-bold text-gray-700 mb-3">State / Region</label>
-                                    <input className="w-full h-10 px-3 py-2 rounded mb-3 border-2" placeholder="State / Region" autoComplete="address-level1" />
-                                </FormControl>
+      <FormControl variant="standard">
+        <InputLabel htmlFor="component-helper">Contact Information</InputLabel>
+        <Input
+          id="component-helper"
+          defaultValue="Composed TextField"
+          aria-describedby="component-helper-text"
+        />
+        <FormHelperText id="component-helper-text">
+          Phone number and/or email address
+        </FormHelperText>
+      </FormControl>
 
-                                <FormControl>
-                                    <label className="text-sm font-bold text-gray-700 mb-3">ZIP / Postcode</label>
-                                    <input className="w-full h-10 px-3 py-2 rounded mb-3 border-2" placeholder="ZIP / Postcode" autoComplete="postal-code" />
-                                </FormControl>
+      <FormControl variant="standard">
+        <InputLabel htmlFor="component-helper">
+          Description of Situation
+        </InputLabel>
+        <Input
+          id="component-helper"
+          defaultValue="Composed TextField"
+          aria-describedby="component-helper-text"
+        />
+        <FormHelperText id="component-helper-text">
+          information that emergency responders should know.
+        </FormHelperText>
+      </FormControl>
+
+      <FormControl sx={{ m: 1 }} variant="standard">
+        <InputLabel id="demo-simple-select-label">Urgency Level</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+        //   value={age}
+          label="Age"
+        //   onChange={handleChange}
+        >
+          <MenuItem value={10}>flooding</MenuItem>
+          <MenuItem value={20}>trapped</MenuItem>
+          <MenuItem value={30}>medical emergency</MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl sx={{ m: 1 }} variant="standard">
+        <InputLabel id="demo-simple-select-label">Type of Emergency</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+        //   value={age}
+          label="Age"
+        //   onChange={handleChange}
+        >
+          <MenuItem value={10}>low</MenuItem>
+          <MenuItem value={20}>medium</MenuItem>
+          <MenuItem value={30}>high</MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl  variant="standard">
+        <InputLabel htmlFor="component-helper">Location</InputLabel>
+        <Input id="component-helper-text" defaultValue="Composed TextField" />
+        <FormHelperText>address</FormHelperText>
+      </FormControl>
+      <FormControl variant="standard">
+        <InputLabel htmlFor="component-error">Additional Notes</InputLabel>
+        <Input
+          id="component-error"
+          defaultValue="Composed TextField"
+          aria-describedby="component-error-text"
+        />
+        <FormHelperText id="component-error-text">additional information</FormHelperText>
+      </FormControl>
                             </Box>
                         }
 
