@@ -10,6 +10,12 @@
   border-radius: 10px;
 }
 
+.mapHeightMobile{
+  height: 391px;
+  width: 391px;
+  border-radius: 10px;
+}
+
 .heroBG {
   background-image: url(./assets/abraham-osorio-jb3HiaUlVKo-unsplash.jpg);
   height: 70vh;
@@ -21,7 +27,6 @@
 }
 
 .missionBG {
-  height: 60vh;
   background-color: transparent;
   width:100%;
 }

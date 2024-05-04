@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
+import delta from '../assets/delta.jpg'
+
 //Navbar
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -36,6 +38,7 @@ import { getMapDots } from '@/utils/DataServices';
 import { Button, Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import Modal from './Modal';
+import { Button } from '@mui/material';
 
 const BetaMap = () => {
 
@@ -390,16 +393,16 @@ const BetaMap = () => {
   }, []);
 
 
-  useEffect(() => {
-    if (map && geocoderContainerRef.current) {
-      const geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
-        placeholder: 'Search for a location',
-      });
-      geocoderContainerRef.current.appendChild(geocoder.onAdd(map));
-    }
-  }, [map, isOpen, isMobileMenuOpen, isMenuOpen]);
+  // useEffect(() => {
+  //   if (map && geocoderContainerRef.current) {
+  //     const geocoder = new MapboxGeocoder({
+  //       accessToken: mapboxgl.accessToken,
+  //       mapboxgl: mapboxgl,
+  //       placeholder: 'Search for a location',
+  //     });
+  //     geocoderContainerRef.current.appendChild(geocoder.onAdd(map));
+  //   }
+  // }, [map, isOpen, isMobileMenuOpen, isMenuOpen]);
 
 
   return (
@@ -439,10 +442,10 @@ const BetaMap = () => {
       <Modal {...{ isModalOpen, setIsModalOpen }}/>
 
       <Box>
-        <section className="bg-sky-500 py-12 px-12">
-          <div className='heroBG py-4 px-4'>
-            <h1>Reponsiveness Matters</h1>
-            <h2>Every second counts</h2>
+        <section className="bg-sky-500">
+          <div className='heroBG py-7 px-7'>
+            <h1 className='text-4xl md:text-7xl mb-4'>In an emergency</h1>
+            <h2 className='text-xl md:text-5xl'>Every second counts</h2>
           </div>
         </section>
 
@@ -459,39 +462,43 @@ const BetaMap = () => {
         </Button>
 
         <section className='bg-white'>
-          <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-20'>Welcome to HeroFlood, your ultimate guide to understanding, preparing for, and responding to flooding incidents.</h1>
-          <h1 className='text-center text-slate-500 mt-4 text-2xl mx-40'> 
-             Our platform empowers individuals and communities with vital information, resources, and tools to mitigate the risks associated with flooding and ensure safety during emergencies.
-          </h1>
+          <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-8 lg:mx-20'>Welcome to FloodHero, your ultimate guide to understanding, preparing for, and responding to flood emergencies.</h1>
+          <h1 className=' text-slate-500 mt-4 text-2xl mx-10 lg:mx-40'>Our platform empowers individuals and communities in the San Joaquin County with vital information, resources, and tools to mitigate the risks associated with flooding and ensure safety during emergencies.</h1>
 
-          <div className='bg-sky-900 mx-40 rounded-md py-4 px-4 my-4 grid grid-cols-2 mt-20'>
+          <div className='bg-sky-900 mx-10 lg:mx-40 rounded-md py-4 px-4 my-4 grid lg:grid-cols-2 mt-20'>
             <div className='py-4'>
-              <h1 className='text-white text-3xl font-bold px-8'>Our Mission</h1>
-              <p className='text-white  mx-8 mt-10'>
-              At HeroFlood, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
+              <h1 className='text-white text-3xl font-bold px-4 lg:px-8'>Our Mission</h1>
+              <p className='text-white mx-4 lg:mx-8 mt-10'>
+              At FloodHero, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
               </p>
             </div>
 
-            <div className='missionBG'></div>
+            <div className='missionBG'>
+              <img src={delta.src} alt="delta" />
+            </div>
           </div>
 
         </section>
 
-        <section className='bg-sky-600 mt-20'>
+        {/* <section className='bg-sky-600 mt-20'>
             <h1>our mission</h1>
         </section>
 
         <section className='bg-sky-700'>
             <h1>hi</h1>
-        </section>
+        </section> */}
 
-        <section className='bg-sky-950 w-full grid grid-cols-2 p-4'>
-
+        <section className='bg-sky-950 w-full grid lg:grid-cols-2 p-4'>
           <div className="justify-center">
-            <div ref={geocoderContainerRef}></div>
+
+
+            <div className='pl-4'>
+              <h1 className='text-4xl text-white my-4'>Find help when you need it most</h1>
+              <p className='text-lg text-white'>In an emergency situation, warming zones are available across San Joaquin County in Lodi, Stockton, Manteca, and Tracy</p>
+            </div>
           </div>
 
-          <div ref={mapContainerRef} className='mapHeight mx-auto'></div>
+          <div ref={mapContainerRef} className='mt-4 mb-6 mx-auto mapHeightMobile'></div>
 
         </section>
       </Box>
