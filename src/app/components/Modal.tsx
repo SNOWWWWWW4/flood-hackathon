@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import CheckIcon from '@mui/icons-material/Check'
 
 const Modal = ({ isModalOpen, setIsModalOpen }: { isModalOpen: boolean, setIsModalOpen: any }) => {
-    const steps = ['Location', 'Details', 'Details Cont'];
+    const steps = ['Details'];
     const [activeStep, setActiveStep] = useState(0);
     const [completed, setCompleted] = React.useState<{
         [k: number]: boolean;
@@ -125,7 +125,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }: { isModalOpen: boolean, setIsMod
                 {allStepsCompleted() ? (
                     <Box className="flex justify-center itmes-center">
                         <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
-                            Here is a gentle confirmation that adding a bathroom was successful.
+                            Here is a gentle confirmation that requesting help was successful.
                         </Alert>
                     </Box>
 
@@ -213,17 +213,9 @@ const Modal = ({ isModalOpen, setIsModalOpen }: { isModalOpen: boolean, setIsMod
                             </Box>
                         }
 
-                        {activeStep === 1 &&
-                            <Box>
+                 
 
-                            </Box>
-                        }
-
-                        {activeStep === 2 &&
-                            <Box>
-
-                            </Box>
-                        }
+                        
                     </Box>
                 )}
 
