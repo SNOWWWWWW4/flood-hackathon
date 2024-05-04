@@ -21,14 +21,16 @@ export default function FormComponent() {
 
   return (
     <>
-      
-      <FormControl variant="standard">
-        <InputLabel htmlFor="component-simple">Name</InputLabel>
+      <div className="bg-white">
+      <FormControl variant="standard" >
+        <InputLabel htmlFor="component-simple" className="text-white">Name</InputLabel>
         <Input id="component-simple" />
       </FormControl>
+      
 
       <FormControl variant="standard">
-        <InputLabel htmlFor="component-helper">Contact Information</InputLabel>
+        
+        <InputLabel htmlFor="component-helper" className="text-white">Contact Information</InputLabel>
         <TextField
           id="component-helper"
           label='Phone number'
@@ -39,7 +41,7 @@ export default function FormComponent() {
       </FormControl>
 
       <FormControl variant="standard">
-        <InputLabel htmlFor="component-helper">
+        <InputLabel htmlFor="component-helper" className="text-white">
           Description of Situation
         </InputLabel>
         <Input
@@ -47,13 +49,13 @@ export default function FormComponent() {
          
           aria-describedby="component-helper-text"
         />
-        <FormHelperText id="component-helper-text">
+        <FormHelperText id="component-helper-text" className="text-white">
           information that emergency responders should know.
         </FormHelperText>
       </FormControl>
 
       <FormControl sx={{ m: 1 }} variant="standard">
-        <InputLabel id="demo-simple-select-label">Urgency Level</InputLabel>
+        <InputLabel id="demo-simple-select-label" className="text-white">Urgency Level</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -92,11 +94,11 @@ export default function FormComponent() {
         <Input
           id="component-error"
          
-          aria-describedby="component-error-text"
+          aria-describedby  ="component-error-text"
         />
         <FormHelperText id="component-error-text">additional information</FormHelperText>
       </FormControl>
-    
+      </div>
       </>
   );
 }
