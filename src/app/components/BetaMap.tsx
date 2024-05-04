@@ -169,8 +169,8 @@ const BetaMap = () => {
     //creating the initial viewport
     const newMap = new mapboxgl.Map({
       container: mapContainerRef.current!,
-      center: [-121.1710, 37.9176], //lng, lat
-      zoom: 10, //higher the number, the more zoomed in
+      center: [-121.28, 37.9176], //lng, lat
+      zoom: 9, //higher the number, the more zoomed in
     });
 
     //giving newMap a style, this is what is creating the globe
@@ -376,7 +376,7 @@ const BetaMap = () => {
 
     // you're already able to zoom in and out using your mouse but this adds a hard button for that as an alternative option
     // also adds the north orientator, full screen mode, and scale reference
-    newMap.addControl(new mapboxgl.FullscreenControl());
+    newMap.addControl(new mapboxgl.FullscreenControl(),'top-left');
     newMap.addControl(new mapboxgl.NavigationControl());
     newMap.addControl(new mapboxgl.ScaleControl());
 
