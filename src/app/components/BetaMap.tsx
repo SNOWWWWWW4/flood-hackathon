@@ -178,7 +178,7 @@ const BetaMap = () => {
     const newMap = new mapboxgl.Map({
       container: mapContainerRef.current!,
       center: [-121.28, 37.9176], //lng, lat
-      zoom: 9, //higher the number, the more zoomed in
+      zoom: 8.5, //higher the number, the more zoomed in
     });
 
     //giving newMap a style, this is what is creating the globe
@@ -200,128 +200,128 @@ const BetaMap = () => {
           data: {
             "type": "FeatureCollection",
             "features": [
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "Description": '<strong>Arnold Rue Community Center</strong><p>Warming Zone</p><p>5758 Loraine Ave.</p><p>Stockton, CA 95210</p><p>Open 8:00pm - 7:00am</p>',
-                        "Name": "Arnold Rue Community Center",
-                        "Type": "Warming Zone",
-                        "Address": "5758 Lorraine Ave.",
-                        "City": "Stockton",
-                        "State": "CA",
-                        "ZipCode": "95210",
-                        "HoursOfOperation": "8:00pm - 7:00am"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.282838,
-                            38.010881
-                        ]
-                    }
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Arnold Rue Community Center</strong><p>Warming Zone</p><p>5758 Loraine Ave.</p><p>Stockton, CA 95210</p><p>Open 8:00pm - 7:00am</p>',
+                  "Name": "Arnold Rue Community Center",
+                  "Type": "Warming Zone",
+                  "Address": "5758 Lorraine Ave.",
+                  "City": "Stockton",
+                  "State": "CA",
+                  "ZipCode": "95210",
+                  "HoursOfOperation": "8:00pm - 7:00am"
                 },
-                {
-                    "type": "Feature",
-                    "properties": {
-                      "Description": '<strong>Stribley Community Center</strong><p>Warming Zone</p><p>1760 E. Sonora St.</p><p>Stockton, CA 95205</p><p>Open 8:00pm - 7:00am</p>',
-                        "Name": "Stribley Community Center",
-                        "Type": "Warming Zone",
-                        "Address": "1760 E. Sonora St.",
-                        "City": "Stockton",
-                        "State": "CA",
-                        "ZipCode": "95205",
-                        "HoursOfOperation": "8:00pm - 7:00am"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.266172,
-                            37.951862
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                      "Description": '<strong>Manteca Transit Center</strong><p>Warming Zone</p><p>220 Moffat Blvd.</p><p>Manteca, CA 95337</p><p>Open 9:00pm - 7:00am</p>',
-                        "Name": "Manteca Transit Center",
-                        "Type": "Warming Zone",
-                        "Address": "220 Moffat Blvd.",
-                        "City": "Manteca",
-                        "State": "CA",
-                        "ZipCode": "95337",
-                        "HoursOfOperation": "9:00pm - 7:00am"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.214544,
-                            37.794473
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                      "Description": '<strong>Tracy Community Connections Center</strong><p>Warming Zone</p><p>95 W 11th St. #206</p><p>Tracy, CA 95376</p><p>Open 7:00pm - 7:00am</p>',
-                        "Name": "Tracy Community Connections Center",
-                        "Type": "Warming Zone",
-                        "Address": "95 W 11th St. #206",
-                        "City": "Tracy",
-                        "State": "CA",
-                        "ZipCode": "95376",
-                        "HoursOfOperation": "7:00pm - 7:00am"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.42638493527943,
-                            37.73986141972307
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                      "Description": '<strong>Tracy Transit Center</strong><p>Warming Zone</p><p>50 E. Sixth St.</p><p>Tracy, CA 95376</p><p>Open Monday - Friday 8:00am - 7:00pm, Saturday 10:00am - 6:00pm</p>',
-                        "Name": "Tracy Transit Center",
-                        "Type": "Warming Zone",
-                        "Address": "50 E. Sixth St.",
-                        "City": "Tracy",
-                        "State": "CA",
-                        "ZipCode": "95376",
-                        "HoursOfOperation": "Monday - Friday 8:00am - 7:00pm, Saturday 10:00am - 6:00pm"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.425314,
-                            37.734345
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                      "Description": '<strong>Hope Harbor (Salvation Army)</strong><p>Warming Zone</p><p>662 N. Sacramento St.</p><p>Lodi, CA 95240</p><p>Open 10:00pm - 6:00am</p>',
-                        "Name": "Hope Harbor (Salvation Army)",
-                        "Type": "Warming Zone",
-                        "Address": "662 N. Sacramento St.",
-                        "City": "Lodi",
-                        "State": "CA",
-                        "ZipCode": "95240",
-                        "HoursOfOperation": "10:00pm - 6:00am"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -121.2714263333634,
-                            38.141419834938915
-                        ]
-                    }
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.282838,
+                    38.010881
+                  ]
                 }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Stribley Community Center</strong><p>Warming Zone</p><p>1760 E. Sonora St.</p><p>Stockton, CA 95205</p><p>Open 8:00pm - 7:00am</p>',
+                  "Name": "Stribley Community Center",
+                  "Type": "Warming Zone",
+                  "Address": "1760 E. Sonora St.",
+                  "City": "Stockton",
+                  "State": "CA",
+                  "ZipCode": "95205",
+                  "HoursOfOperation": "8:00pm - 7:00am"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.266172,
+                    37.951862
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Manteca Transit Center</strong><p>Warming Zone</p><p>220 Moffat Blvd.</p><p>Manteca, CA 95337</p><p>Open 9:00pm - 7:00am</p>',
+                  "Name": "Manteca Transit Center",
+                  "Type": "Warming Zone",
+                  "Address": "220 Moffat Blvd.",
+                  "City": "Manteca",
+                  "State": "CA",
+                  "ZipCode": "95337",
+                  "HoursOfOperation": "9:00pm - 7:00am"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.214544,
+                    37.794473
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Tracy Community Connections Center</strong><p>Warming Zone</p><p>95 W 11th St. #206</p><p>Tracy, CA 95376</p><p>Open 7:00pm - 7:00am</p>',
+                  "Name": "Tracy Community Connections Center",
+                  "Type": "Warming Zone",
+                  "Address": "95 W 11th St. #206",
+                  "City": "Tracy",
+                  "State": "CA",
+                  "ZipCode": "95376",
+                  "HoursOfOperation": "7:00pm - 7:00am"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.42638493527943,
+                    37.73986141972307
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Tracy Transit Center</strong><p>Warming Zone</p><p>50 E. Sixth St.</p><p>Tracy, CA 95376</p><p>Open Monday - Friday 8:00am - 7:00pm, Saturday 10:00am - 6:00pm</p>',
+                  "Name": "Tracy Transit Center",
+                  "Type": "Warming Zone",
+                  "Address": "50 E. Sixth St.",
+                  "City": "Tracy",
+                  "State": "CA",
+                  "ZipCode": "95376",
+                  "HoursOfOperation": "Monday - Friday 8:00am - 7:00pm, Saturday 10:00am - 6:00pm"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.425314,
+                    37.734345
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "Description": '<strong>Hope Harbor (Salvation Army)</strong><p>Warming Zone</p><p>662 N. Sacramento St.</p><p>Lodi, CA 95240</p><p>Open 10:00pm - 6:00am</p>',
+                  "Name": "Hope Harbor (Salvation Army)",
+                  "Type": "Warming Zone",
+                  "Address": "662 N. Sacramento St.",
+                  "City": "Lodi",
+                  "State": "CA",
+                  "ZipCode": "95240",
+                  "HoursOfOperation": "10:00pm - 6:00am"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    -121.2714263333634,
+                    38.141419834938915
+                  ]
+                }
+              }
             ]
-        },
+          },
         });
 
         newMap.addLayer({
@@ -348,7 +348,7 @@ const BetaMap = () => {
       // Change the cursor style as a UI indicator.
       newMap.getCanvas().style.cursor = 'pointer';
 
-      
+
       // Copy coordinates array.
       const coordinates: any = e?.features?.[0]?.geometry?.coordinates?.slice();
       const Description = e?.features?.[0]?.properties?.Description;
@@ -384,7 +384,7 @@ const BetaMap = () => {
 
     // you're already able to zoom in and out using your mouse but this adds a hard button for that as an alternative option
     // also adds the north orientator, full screen mode, and scale reference
-    newMap.addControl(new mapboxgl.FullscreenControl(),'top-left');
+    newMap.addControl(new mapboxgl.FullscreenControl(), 'top-left');
     newMap.addControl(new mapboxgl.NavigationControl());
     newMap.addControl(new mapboxgl.ScaleControl());
 
@@ -439,9 +439,10 @@ const BetaMap = () => {
         {list}
       </Drawer>
 
-      <Modal {...{ isModalOpen, setIsModalOpen }}/>
+      <Modal {...{ isModalOpen, setIsModalOpen }} />
 
       <Box>
+        {/* Hero Image Section */}
         <section className="bg-sky-500">
           <div className='heroBG py-7 px-7'>
             <h1 className='text-4xl md:text-7xl mb-4'>In an emergency</h1>
@@ -449,27 +450,30 @@ const BetaMap = () => {
           </div>
         </section>
 
-        <Button  variant="contained" color="primary" onClick={() => setIsModalOpen(true)}
-            size="large" aria-label="add"
-            style={{
-                position: 'fixed',
-                bottom: '25px',
-                right: '16px',
-                zIndex: 100,
-            }}
+        {/* REPORT Button */}
+        <Button variant="contained" color="primary" onClick={() => setIsModalOpen(true)}
+          size="large" aria-label="add"
+          style={{
+            position: 'fixed',
+            bottom: '25px',
+            right: '16px',
+            zIndex: 100,
+          }}
         >
-            Report
+          Report
         </Button>
 
+        {/* White Background Section */}
         <section className='bg-white'>
-          <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-8 lg:mx-20'>Welcome to FloodHero, your ultimate guide to understanding, preparing for, and responding to flood emergencies.</h1>
+          <h1 className='text-center text-slate-700 mt-20 mb-8 text-4xl font-bold mx-8 lg:mx-20'>Welcome to FloodHero</h1>
+          <h1 className='text-slate-500 mt-4 text-2xl mx-10 lg:mx-40'>Your ultimate guide to understanding, preparing for, and responding to flood emergencies.</h1>
           <h1 className=' text-slate-500 mt-4 text-2xl mx-10 lg:mx-40'>Our platform empowers individuals and communities in the San Joaquin County with vital information, resources, and tools to mitigate the risks associated with flooding and ensure safety during emergencies.</h1>
 
-          <div className='bg-sky-900 mx-6 lg:mx-40 rounded-md py-4 px-4 grid lg:grid-cols-2 my-20'>
+          <div className='bg-sky-900 mx-6 lg:mx-32 rounded-md py-4 px-4 grid lg:grid-cols-2 my-20'>
             <div className='py-4'>
               <h1 className='text-white text-3xl font-bold px-4 lg:px-8'>Our Mission</h1>
               <p className='text-white mx-4 lg:mx-8 mt-10'>
-              At FloodHero, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
+                At FloodHero, we're committed to equipping you with the knowledge and resources needed to navigate through flooding challenges. Our team of experts brings together years of experience in disaster management, environmental science, and community resilience to provide comprehensive support and guidance.
               </p>
             </div>
 
@@ -480,7 +484,7 @@ const BetaMap = () => {
 
         </section>
 
-        <section className='bg-sky-950 w-full grid lg:grid-cols-2 p-4'>
+        <section className='bg-sky-950 w-full grid lg:grid-cols-2 gap-8 p-4'>
           <div className="justify-center">
 
 

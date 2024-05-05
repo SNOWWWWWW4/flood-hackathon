@@ -9,12 +9,6 @@
   border-radius: 10px;
 }
 
-.mapHeightMobile{
-  height: 391px;
-  width: 100%;
-  border-radius: 10px;
-}
-
 .heroBG {
   background-image: url(./assets/abraham-osorio-jb3HiaUlVKo-unsplash.jpg);
   height: 70vh;
