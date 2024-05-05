@@ -454,7 +454,7 @@ const BetaMap = () => {
             style={{
                 position: 'fixed',
                 bottom: '25px',
-                right: '5px',
+                right: '16px',
                 zIndex: 100,
             }}
         >
@@ -465,7 +465,7 @@ const BetaMap = () => {
           <h1 className='text-center text-slate-700 mt-20 text-3xl font-bold mx-8 lg:mx-20'>Welcome to FloodHero, your ultimate guide to understanding, preparing for, and responding to flood emergencies.</h1>
           <h1 className=' text-slate-500 mt-4 text-2xl mx-10 lg:mx-40'>Our platform empowers individuals and communities in the San Joaquin County with vital information, resources, and tools to mitigate the risks associated with flooding and ensure safety during emergencies.</h1>
 
-          <div className='bg-sky-900 mx-10 lg:mx-40 rounded-md py-4 px-4 my-4 grid lg:grid-cols-2 mt-20'>
+          <div className='bg-sky-900 mx-6 lg:mx-40 rounded-md py-4 px-4 grid lg:grid-cols-2 my-20'>
             <div className='py-4'>
               <h1 className='text-white text-3xl font-bold px-4 lg:px-8'>Our Mission</h1>
               <p className='text-white mx-4 lg:mx-8 mt-10'>
@@ -474,19 +474,11 @@ const BetaMap = () => {
             </div>
 
             <div className='missionBG'>
-              <img src={delta.src} alt="delta" />
+              <img className='p-5' src={delta.src} alt="delta" />
             </div>
           </div>
 
         </section>
-
-        {/* <section className='bg-sky-600 mt-20'>
-            <h1>our mission</h1>
-        </section>
-
-        <section className='bg-sky-700'>
-            <h1>hi</h1>
-        </section> */}
 
         <section className='bg-sky-950 w-full grid lg:grid-cols-2 p-4'>
           <div className="justify-center">
@@ -498,7 +490,7 @@ const BetaMap = () => {
             </div>
           </div>
 
-          <div ref={mapContainerRef} className='mt-4 mb-6 mx-auto mapHeightMobile'></div>
+          <div ref={mapContainerRef} className='mt-4 mb-20 mx-auto mapHeight'></div>
 
         </section>
       </Box>
